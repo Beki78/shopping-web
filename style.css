@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: #f1d1d1;
+    color: #000;
+  }
+  header {
+    position: fixed; /* Fixed position */
+    width: 100%;
+    top: 0;
+    z-index: 9999; /* Ensure it's above other elements */
+    
+    
+   
+  }
+  nav  {
+    background: #fd9292;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+     position: fixed;
+    top: 0;
+    
+    
+
+
+  } 
+.logo{
+    width: 150px;
+    margin-right: 30px;
+    margin-left: 50px;
+    
+}
+.search-box{
+    display: flex;
+    margin-right: 60px;
+    width: 60%;
+    padding: 20px;
+    height: 80px;
+}
+.search-box input{
+    width: 700px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid ;
+    font-size: 15px;
+    padding-left: 10px;
+    background: #f1d1d1;
+}
+.fa-solid.fa-magnifying-glass{
+    width: 50px;
+    background: #806b6b;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid ;
+    transform: background 0.5s ;
+    cursor: pointer;
+}
+.fa-solid.fa-magnifying-glass:hover{
+    background: #f1d1d1;
+    
+}
+.icons{
+    margin-right: 70px;
+    height: 80px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-solid.fa-user {
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+}
+.fa-solid.fa-user:hover{
+    transform: translate(5px, 5px);
+}
+.fa-solid.fa-cart-shopping {
+    font-size: 30px;
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+}
+.fa-solid.fa-cart-shopping:hover{
+    transform: translate(5px, 5px);
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+nav ul li a {
+    text-decoration: none;
+    margin-top: 0;
+    margin-left: 50px;
+    display: block;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.5s;
+}  
+  nav ul li a:hover{
+    color: #fff;
+    transform: translateY(-5px);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1d1d1;
+    min-width: 100px;
+    z-index: 1;
+    padding-top: 20px;
+    padding-right: 45px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border: 1px solid #000;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a:hover{
+    color: #fd9292;
+  }
+
+  .btn{
+    margin-right: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn button{
+    padding: 7px;
+    background: #806b6b;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 5sec;
+    color: #f1d1d1;
+}
+.btn button:hover{
+    background: #f1d1d1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    color: #000;
+}
+
+/*Shopping*/
+.container{
+    display: flex;
+}
+.filter{
+    margin-top: 300px;
+    background:#fd9292;
+    width: 25%;
+    height: 250px;
+    margin-left: 30px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    border: 1px solid;
+}
+.filter:hover{
+    transform: scale(1.1) ;
+    background: #f1d1d1;
+    border: 2px solid;
+    border-color: #fd9292;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    
+    
+}
+.filter h4{
+    font-size: 40px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.filter input {
+    margin-left: 30px;
+    
+}
+.filter label{
+    font-size: 18px;
+    line-height: 30px;
+}
+.items{
+    width: 60%;
+    background: #fd9292;
+    margin-top: 300px;
+    margin-left: 100px;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    
+}
+.items h4{
+    font-size: 40px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Use fractions to distribute width equally */
+    grid-gap: 5px; /* Adjust the gap between grid items */
+    width: 100%; /* Make the grid take full width of its container */
+    
+}
+.grid-item {
+    /* Adjust the styles for the grid items */
+    height: 300px; /* Adjust the height of grid items as needed */
+    border: 1px solid #000; /* Set yellow border */
+    border-radius: 10px;
+    margin: 40px 10px;
+    transition:  0.7s;
+    cursor: pointer;
+
+}
+.grid-item:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    background: #f1d1d1;
+    transform: scale(1.1);
+}
+.grid-item img{
+    width: 100%;
+    height: 75%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/*-----------SignUp---------*/
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styles for the sign-up form */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1d1d1;
+  }
+  
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  .signup-form {
+    background-color: #fd9292;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+  }
+  
+  .signup-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-group input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-group input[type="submit"]:hover {
+    background-color: #f1d1d1;
+    color: #000;
+  }
+  
+
+
+
+  
+
+  
